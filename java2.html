@@ -1,0 +1,221 @@
+<<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+    <h1>Generador de Frases Aleatorias</h1>
+    <p id="frase"></p>
+    <button id="generarFrase">Generar Frase Aleatoria</button>
+
+<p id="demo"></p>
+
+
+<script>
+//1
+var frases = ["Que lindo dia" , "Hace mucho frio" , "Tengo mucho sueño" , "Quiero comer" , "Tengo mucha fiaca" ,];
+
+document.getElementById("demo").innerHTML = frases [Math.floor(Math.random() * 5)]
+</script>
+
+
+
+//2
+<body>
+  <button id="cambiarTexto">Cambiar Texto</button>
+  <div id="miDiv">Este es el texto original.</div>
+</body>
+
+<script>
+function cambiarTextoDiv(){
+  var nuevoTexto = "Este es el nuevo texto.";
+  document.getElementById("miDiv").textContent = nuevoTexto;
+}
+
+var botonCambiarTexto = document.getElementById("cambiarTexto");
+botonCambiarTexto.addEvenListener("click", cambiarTextoDiv);
+
+</script>
+
+//3
+<body>
+  <button id="generarNumero">Generar Numero Aleatorio</button>
+  <div id="numeroAleatorio"></div>
+</body>
+
+<script>
+  function generarNumeroAleatorio() {
+    var numero = Math.floor(Math.random() * 100) + 1;
+    document.getElementById("numeroAleatorio").textContent= "Numero Aleatorio: " + numero; 
+  }
+
+var botonGenerarNumero = document.getElementById("generarNumero");
+botonGenerarNumero.addEvenListener("click", generarNumeroAleatorio);
+</script>
+
+
+//4
+<body>
+  <buton id="agregarTarea">Agregar</buton>
+  <u1 id="listaTareas"></u1>
+</body>
+
+<script>
+  function agregarTarea() {
+    var tareaTexto = document.getElementById("nuevaTarea").value;
+    if (tareaTexto.trim() === "") {
+    alert("Por favor, ingresa una tarea valida."); return;
+      }
+    }
+
+   var listaTareas = document.getElementById("listaTareas");
+   var nuevaTarea = document.getElementById("li");
+   nuevaTarea.textContent = tareaTexto; 
+
+   var completadoButton = document.getElementById("button");
+   completadoButton.textContent = "Completado";
+   completadoButton.addEvenListener ("click", function() {
+    nuevaTarea,style.textDecoration = "line-through";
+    completadoButton.disabled = true;
+   } 
+
+   var eliminarButton = document.createElement("button");
+   eliminarButton.textContent = "Eliminar";
+   eliminarButton.addEvenListener("click" , fucntion(){
+    listaTareas.removeChild(nuevaTarea);
+   }
+
+   nuevaTarea.appendChild(completadoButton);
+   nuevaTarea.appendChild(eliminarButton);
+   listaTareas.appendChild(nuevaTarea);
+
+   document.getElementById("nuevaTarea").value = "";
+
+   var botonAgregarTarea = document.getElementById("agregarTarea");
+        botonAgregarTarea.addEventListener("click", agregarTarea);
+
+</script>
+
+
+//5
+<body>
+    <button id="cambiarColor">Cambiar Color de Fondo</button>
+    <script src="script.js"></script>
+</body>
+
+<script>
+ const botonCambiarColor = document.getElementById("cambiarColor");
+ const cuerpoPagina = document.body; 
+
+ function cambiarColorFondo() {
+  const colorAleatorio = "#" + Math.floor(Math.random()*16777215).toString(16);
+  cuerpoPagina.style.backgroundColor = colorAleatorio;
+ }
+
+ botonCambiarColor.addEvenListener("click", cambiarColorFondo)
+
+</script>
+
+
+//6
+<body>
+ <button id="alternarBoton">Alternar Visibilidad</button>
+    <div id="elementoOculto" style="display: none;">
+        Este es el elemento que se mostrará u ocultará.
+    </div>
+
+  <script src="script.js"></script>
+</body>
+
+<script>
+  const botonAlternar = document.getElementById("alternarBoton")
+  const elemento0culto = document.getElementById("elemento0culto")
+
+  function alternarVisibilidad() {
+    if (elemento0culto.style.display === "none") {
+      elemento0culto.style.display = "block"; 
+    } else {
+      elemento0culto.style.display = "none";
+    }
+  }
+
+  botonAlternar.addEvenListener("click", alternarVisibilidad);
+</script>
+
+
+//7
+<body>
+   <input type="number" id="numero1" placeholder="Número 1">
+    <input type="number" id="numero2" placeholder="Número 2">
+    <button id="suma">Sumar</button>
+    <button id="resta">Restar</button>
+    <button id="multiplicacion">Multiplicar</button>
+    <button id="division">Dividir</button>
+    <div id="resultado"></div>
+</body>
+
+<script>
+  const numero1Input = document.getElementById("numero1");
+  const numero2Input = document.getElementById("numero2");
+  const sumaButton = document.getElementById("suma");
+  const restaButton = document.getElementById("resta");
+  const multiplicacionButton = document.getElementById("multiplicacion");
+  const divisionButton = document.getElementById("division");
+  const resultadoDiv = document.getElementById("resultado"); 
+
+  function realizarOperacion(operador) {
+    const num1 = parseFloat(numero1Input.value);
+    const num2 = parseFloat(numero2Input.value);
+
+    if (isNan(num1)) 
+
+</script>
+
+
+//8
+<body>
+  <button id="generarContraseña">Generar Contraseña</button>
+  <div id="contraseñaGenerada"></div>
+</body>
+
+<script>
+  const generarContraseñaButton = document.getElementById("generarContraseña");
+  const contraseñaGeneradaDiv = document.getElementById("contraseñaGenerada");
+
+  function generarContraseña() {
+    const longitud = 12; 
+    const caracteres = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+  }
+
+  let constraseña = "";
+  for (let i = 0; i < longitud; i++) {
+    const indiceAleatorio = Math.floor(Math.random() * caracteres.length);
+    contraseña += caracteres.charAt(indiceAleatorio);
+  }
+
+  contrasenaGeneradaDiv.textContent = `Contraseña generada: ${contraseña}
+
+</script>
+
+//9
+<body>
+  <button id="botonClic">Clic aqui</button>
+  <div id="contadorClics">0</div>
+</body>
+
+<script>
+  const botonClic = document.getElementById("botonClic");
+  const contadorClics = document.getElementById("contadorClics");
+
+  let clics= 0:
+
+  function aumentarContador() {
+    clics++;
+    contadorClics.textContent = clics;
+  }  
+
+  botonClic.addEvenListener("click", aumentarContador);
+</script>
